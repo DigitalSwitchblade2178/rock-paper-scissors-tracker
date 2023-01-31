@@ -15,9 +15,9 @@ input.onButtonPressed(Button.AB, function () {
     Rounds += 1
     basic.showLeds(`
         # # # # #
-        . . . . .
-        . . . . .
-        . . . . .
+        . . # . .
+        . . # . .
+        . . # . .
         . . # . .
         `)
     Update_Score()
