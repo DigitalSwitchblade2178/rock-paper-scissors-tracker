@@ -1,3 +1,39 @@
+input.onButtonPressed(Button.A, function () {
+    Player_A += 1
+    Rounds += 1
+    basic.showLeds(`
+        . . # . .
+        . # . # .
+        # . . . #
+        # # # # #
+        # . . . #
+        `)
+    Update_Score()
+})
+input.onButtonPressed(Button.AB, function () {
+    Ties += 1
+    Rounds += 1
+    basic.showLeds(`
+        # # # # #
+        . . . . .
+        . . . . .
+        . . . . .
+        . . # . .
+        `)
+    Update_Score()
+})
+input.onButtonPressed(Button.B, function () {
+    Player_B += 1
+    Rounds += 1
+    basic.showLeds(`
+        # # # . .
+        # . . # .
+        # # # . .
+        # . . # .
+        # # # . .
+        `)
+    Update_Score()
+})
 input.onGesture(Gesture.Shake, function () {
     Reset()
 })
@@ -21,8 +57,8 @@ function Reset () {
     basic.pause(2000)
     Update_Score()
 }
-let Rounds = 0
-let Ties = 0
 let Player_B = 0
+let Ties = 0
+let Rounds = 0
 let Player_A = 0
 Reset()
